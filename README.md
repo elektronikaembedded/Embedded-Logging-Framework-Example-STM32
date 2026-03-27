@@ -63,7 +63,7 @@ git submodule update --init --recursive
 ### 2. Build the project
 Open in STM32CubeIDE
 Build and flash to your board
-⚙️ Configuration
+### ⚙️ Configuration
 
 Edit:
 

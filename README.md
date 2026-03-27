@@ -22,6 +22,7 @@ It demonstrates:
 ---
 
 ## 📂 Project Structure
+```
 Embedded-Logging-Framework-Example-STM32/
 ├── Core/
 ├── Drivers/
@@ -35,9 +36,8 @@ Embedded-Logging-Framework-Example-STM32/
 ├── docs/
 │ └── images/
 │ └── debug_output.png
-
+```
 ---
-
 ## 🔗 Dependencies
 
 This project uses:
@@ -58,10 +58,12 @@ This project uses:
 git clone --recurse-submodules https://github.com/<your-repo>/Embedded-Logging-Framework-Example-STM32.git
 Or
 git submodule update --init --recursive
-2. Build the project
+```
+---
+### 2. Build the project
 Open in STM32CubeIDE
 Build and flash to your board
-⚙️ Configuration
+### ⚙️ Configuration
 
 Edit:
 
@@ -69,13 +71,20 @@ Modules/debug/config.h
 
 Example:
 
-#define DEBUG_ENABLE YES
-#define DEBUG_BUFFER_SIZE 256
-
-#define DEBUG_ENABLE_SEQUENCE_NO YES
+```c
+#define DEBUG_ENABLE                YES
+#define DEBUG_BUFFER_SIZE           256
+#define DEBUG_USE_BAREMETAL         YES
+#define DEBUG_USE_FREERTOS          NO
+#define DEBUG_USE_USB_CDC           YES
+#define DEBUG_USE_UART              NO
+#define DEBUG_ENABLE_SEQUENCE_NO    YES
 #define DEBUG_ENABLE_TIME_DATE_INFO YES
-#define DEBUG_ENABLE_THREAD_INFO YES
-🧠 Initialization Example
+#define DEBUG_ENABLE_THREAD_INFO    YES
+
+```
+### 🧠 Initialization Example
+```c
 #include "debug.h"
 #include "osal.h"
 
@@ -110,15 +119,18 @@ int main(void)
         HAL_Delay(1000);
     }
 }
-🖥️ Output Example
+```
+### 🖥️ Output Example
+```c
 [22100][0][MAIN][DEBUG] Debug info: 42
 [22101][0][MAIN][ERROR] Fatal error: -1
 [22102][0][MAIN][WARN] Battery low
 [22107][0][MAIN][INFO] System ready
-📸 Real Device Output
+```
+### 📸 Real Device Output
 
 Output captured from STM32 via USB CDC using the debug framework
-## 📸 Screenshots
+### 📸 Screenshots
 
 ### USB CDC Output
 ![USB Output](docs/images/debug_usb.png)
@@ -126,7 +138,7 @@ Output captured from STM32 via USB CDC using the debug framework
 ### UART Output
 ![UART Output](docs/images/debug_uart.png)
 
-🔧 OSAL (Port Layer)
+### 🔧 OSAL (Port Layer)
 
 Located in:
 
@@ -136,7 +148,7 @@ Supported:
 
 Bare-metal
 FreeRTOS
-🔌 Transport Layer
+### 🔌 Transport Layer
 
 Located in:
 
@@ -146,12 +158,12 @@ Examples:
 
 USB CDC
 UART
-🔒 Thread Safety
+### 🔒 Thread Safety
 Uses OSAL lock/unlock
 Safe for:
 Bare-metal (IRQ disable)
 RTOS (mutex)
-🛠️ Customization
+### 🛠️ Customization
 Change Transport
 
 Modify or add:
@@ -162,11 +174,13 @@ Change OS
 Switch OSAL implementation:
 
 port/osal/osal_<platform>.c
-📌 Notes
+### 📌 Notes
 OSAL module is required
 Transport must implement write()
 Logging can be fully disabled via config:
+```c
 #define DEBUG_ENABLE NO
-📜 License
+```
+### 📜 License
 
 MIT License

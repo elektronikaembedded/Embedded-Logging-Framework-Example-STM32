@@ -84,6 +84,7 @@ Example:
 
 ```
 ### 🧠 Initialization Example
+```c
 #include "debug.h"
 #include "osal.h"
 
@@ -118,6 +119,7 @@ int main(void)
         HAL_Delay(1000);
     }
 }
+```
 ### 🖥️ Output Example
 [22100][0][MAIN][DEBUG] Debug info: 42
 [22101][0][MAIN][ERROR] Fatal error: -1

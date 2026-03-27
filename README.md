@@ -38,7 +38,7 @@ Embedded-Logging-Framework-Example-STM32/
 │ └── debug_output.png
 
 ---
-
+---
 ## 🔗 Dependencies
 
 This project uses:

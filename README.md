@@ -77,7 +77,7 @@ Example:
 #define DEBUG_ENABLE_SEQUENCE_NO YES
 #define DEBUG_ENABLE_TIME_DATE_INFO YES
 #define DEBUG_ENABLE_THREAD_INFO YES
-🧠 Initialization Example
+### 🧠 Initialization Example
 #include "debug.h"
 #include "osal.h"
 

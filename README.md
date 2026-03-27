@@ -71,12 +71,18 @@ Modules/debug/config.h
 
 Example:
 
-#define DEBUG_ENABLE YES
-#define DEBUG_BUFFER_SIZE 256
-
-#define DEBUG_ENABLE_SEQUENCE_NO YES
+```c
+#define DEBUG_ENABLE                YES
+#define DEBUG_BUFFER_SIZE           256
+#define DEBUG_USE_BAREMETAL         YES
+#define DEBUG_USE_FREERTOS          NO
+#define DEBUG_USE_USB_CDC           YES
+#define DEBUG_USE_UART              NO
+#define DEBUG_ENABLE_SEQUENCE_NO    YES
 #define DEBUG_ENABLE_TIME_DATE_INFO YES
-#define DEBUG_ENABLE_THREAD_INFO YES
+#define DEBUG_ENABLE_THREAD_INFO    YES
+
+```
 ### 🧠 Initialization Example
 #include "debug.h"
 #include "osal.h"

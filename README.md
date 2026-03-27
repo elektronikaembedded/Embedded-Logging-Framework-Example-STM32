@@ -58,6 +58,7 @@ This project uses:
 git clone --recurse-submodules https://github.com/<your-repo>/Embedded-Logging-Framework-Example-STM32.git
 Or
 git submodule update --init --recursive
+```
 ---
 ### 2. Build the project
 Open in STM32CubeIDE

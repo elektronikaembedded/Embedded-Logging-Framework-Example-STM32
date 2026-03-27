@@ -1,0 +1,90 @@
+/*******************************************************************************
+ * @file        osal_baremetal.c
+ * @brief       Bare-metal OSAL template
+ *
+ * @details
+ * Copy this file to your project:
+ *   port/osal/osal_baremetal.c
+ *
+ * Then update the implementation as per your platform.
+ ******************************************************************************/
+
+#include "osal.h"
+
+/* Optional: include your MCU headers */
+#include "stm32f4xx_hal.h"
+
+/*******************************************************************************
+ * Static functions
+ *******************************************************************************/
+
+static osal_err_t osal_fn_init(osal_t *osal)
+{
+    (void)osal;
+    return OSAL_OK;
+}
+
+static osal_err_t osal_fn_deinit(osal_t *osal)
+{
+    (void)osal;
+    return OSAL_OK;
+}
+
+static osal_err_t osal_lock(void)
+{
+    /* Disable interrupts */
+    __disable_irq();
+    return OSAL_OK;
+}
+
+static osal_err_t osal_unlock(void)
+{
+    /* Enable interrupts */
+    __enable_irq();
+    return OSAL_OK;
+}
+
+static bool osal_is_isr(void)
+{
+    /* Cortex-M specific */
+    return (__get_IPSR() != 0U);
+}
+
+static uint32_t osal_timestamp(void)
+{
+    /* Replace with your tick source */
+    return 0;
+}
+
+static void osal_delay_ms(uint32_t ms)
+{
+
+	HAL_Delay(ms);
+}
+
+static void osal_delay_ns(uint32_t ns)
+{
+	HAL_Delay(1);
+}
+
+/*******************************************************************************
+ * Exported ops
+ *******************************************************************************/
+
+const osal_ops_t osal_ops =
+{
+    .init = osal_fn_init,
+    .deinit = osal_fn_deinit,
+    .lock = osal_lock,
+    .unlock = osal_unlock,
+    .is_isr = osal_is_isr,
+    .get_timestamp = osal_timestamp,
+    .delay_ms = osal_delay_ms,
+    .delay_ns = osal_delay_ns,
+};
+
+const osal_ops_t *get_osal_ops(void)
+{
+    return &osal_ops;
+}
+/****************************** End of file ***********************************/

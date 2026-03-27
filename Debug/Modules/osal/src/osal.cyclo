@@ -1,0 +1,2 @@
+../Modules/osal/src/osal.c:25:12:osal_init	4
+../Modules/osal/src/osal.c:49:12:osal_deinit	4

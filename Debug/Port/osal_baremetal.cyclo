@@ -1,0 +1,9 @@
+../Port/osal_baremetal.c:21:19:osal_fn_init	1
+../Port/osal_baremetal.c:27:19:osal_fn_deinit	1
+../Port/osal_baremetal.c:33:19:osal_lock	1
+../Port/osal_baremetal.c:40:19:osal_unlock	1
+../Port/osal_baremetal.c:47:13:osal_is_isr	1
+../Port/osal_baremetal.c:53:17:osal_timestamp	1
+../Port/osal_baremetal.c:59:13:osal_delay_ms	1
+../Port/osal_baremetal.c:65:13:osal_delay_ns	1
+../Port/osal_baremetal.c:86:19:get_osal_ops	1

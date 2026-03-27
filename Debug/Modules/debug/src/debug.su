@@ -1,0 +1,7 @@
+../Modules/debug/src/debug.c:70:17:debug_next_sequence	16	static
+../Modules/debug/src/debug.c:97:5:debug_init	16	static
+../Modules/debug/src/debug.c:150:6:debug_set_level	16	static
+../Modules/debug/src/debug.c:155:13:debug_get_level	4	static
+../Modules/debug/src/debug.c:163:5:debug_write	32	static
+../Modules/debug/src/debug.c:199:5:debug_printf	16	static
+../Modules/debug/src/debug.c:227:5:debug_log	44	static

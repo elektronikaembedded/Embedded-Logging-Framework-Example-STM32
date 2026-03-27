@@ -1,0 +1,4 @@
+../Port/debug_transport.c:51:12:trns_init	1
+../Port/debug_transport.c:57:12:trns_deinit	1
+../Port/debug_transport.c:63:12:trns_write	4
+../Port/debug_transport.c:83:5:debug_transport_init	1

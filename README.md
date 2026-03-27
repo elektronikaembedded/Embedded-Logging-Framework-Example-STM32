@@ -22,6 +22,7 @@ It demonstrates:
 ---
 
 ## 📂 Project Structure
+```
 Embedded-Logging-Framework-Example-STM32/
 ├── Core/
 ├── Drivers/
@@ -110,15 +111,15 @@ int main(void)
         HAL_Delay(1000);
     }
 }
-🖥️ Output Example
+### 🖥️ Output Example
 [22100][0][MAIN][DEBUG] Debug info: 42
 [22101][0][MAIN][ERROR] Fatal error: -1
 [22102][0][MAIN][WARN] Battery low
 [22107][0][MAIN][INFO] System ready
-📸 Real Device Output
+### 📸 Real Device Output
 
 Output captured from STM32 via USB CDC using the debug framework
-## 📸 Screenshots
+### 📸 Screenshots
 
 ### USB CDC Output
 ![USB Output](docs/images/debug_usb.png)
@@ -126,7 +127,7 @@ Output captured from STM32 via USB CDC using the debug framework
 ### UART Output
 ![UART Output](docs/images/debug_uart.png)
 
-🔧 OSAL (Port Layer)
+### 🔧 OSAL (Port Layer)
 
 Located in:
 
@@ -146,12 +147,12 @@ Examples:
 
 USB CDC
 UART
-🔒 Thread Safety
+### 🔒 Thread Safety
 Uses OSAL lock/unlock
 Safe for:
 Bare-metal (IRQ disable)
 RTOS (mutex)
-🛠️ Customization
+### 🛠️ Customization
 Change Transport
 
 Modify or add:
@@ -162,11 +163,11 @@ Change OS
 Switch OSAL implementation:
 
 port/osal/osal_<platform>.c
-📌 Notes
+### 📌 Notes
 OSAL module is required
 Transport must implement write()
 Logging can be fully disabled via config:
 #define DEBUG_ENABLE NO
-📜 License
+### 📜 License
 
 MIT License

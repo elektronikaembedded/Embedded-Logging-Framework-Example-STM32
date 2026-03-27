@@ -178,7 +178,9 @@ port/osal/osal_<platform>.c
 OSAL module is required
 Transport must implement write()
 Logging can be fully disabled via config:
+```c
 #define DEBUG_ENABLE NO
+```
 ### 📜 License
 
 MIT License

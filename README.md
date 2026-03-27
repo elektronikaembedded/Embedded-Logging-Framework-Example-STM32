@@ -121,10 +121,12 @@ int main(void)
 }
 ```
 ### 🖥️ Output Example
+```c
 [22100][0][MAIN][DEBUG] Debug info: 42
 [22101][0][MAIN][ERROR] Fatal error: -1
 [22102][0][MAIN][WARN] Battery low
 [22107][0][MAIN][INFO] System ready
+```
 ### 📸 Real Device Output
 
 Output captured from STM32 via USB CDC using the debug framework

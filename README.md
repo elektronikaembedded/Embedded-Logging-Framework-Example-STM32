@@ -30,9 +30,9 @@ Embedded-Logging-Framework-Example-STM32/
 │ ├── debug/ (submodule)
 │ └── osal/ (submodule)
 ├── port/   
-│ ├── debug_config.h 
-│ └── debug_transport.c
-  └── osal_baremetal.c 
+│ ├── debug_config.h       #copy debug config template
+│ └── debug_transport.c    #copy debug transport template
+  └── osal_baremetal.c     #copy osal template 
 ├── docs/
 │ └── images/
 │ └── debug_output.png
